@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { MedicinesPage } from './pages';
+
 function App() {
-  return <div className="App">medicines</div>;
+  return <MedicinesPage />;
 }
 
 export default App;
