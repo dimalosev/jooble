@@ -6,13 +6,12 @@ import { Button } from '../common/button';
 
 import css from './style.module.css';
 
-const MedicinesItem = ({ medicineInfo, onEdit, onDelete }) => {
-  const { id } = medicineInfo;
+const MedicinesItem = ({ id, medicineInfo, onEdit, onDelete }) => {
   const onDeleteMedicineItem = useCallback(() => onDelete(id), [id]);
   const onEditMedicineItem = useCallback(() => onEdit(id), [id]);
 
   return (
-    <div className={css.medicineItem} onDoubleClick={onEdit}>
+    <div className={css.medicineItem} onDoubleClick={onEditMedicineItem}>
       <div className={css.medicineItemInfo}>
         {Object.keys(medicineInfo).map((info) => (
           <span className={css.medicineItemText}>{medicineInfo[info]}</span>

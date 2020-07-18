@@ -1,4 +1,5 @@
 const locale = {
+  emptyListMessage: 'Nothing found',
   projectButtons: {
     create: 'Create',
     edit: 'Edit',

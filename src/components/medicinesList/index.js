@@ -1,1 +1,3 @@
-export { MedicinesList } from './MedicinesList';
+import MedicinesList from './MedicinesList';
+
+export { MedicinesList };
