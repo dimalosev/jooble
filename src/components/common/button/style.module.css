@@ -3,8 +3,9 @@
     line-height: 12px;
     color: #fff;
     border-radius: 5px;
-    border: 2px solid #FF4F12;
-    padding: 8px 25px;
+    border: 1px solid #FF4F12;
+    padding: 5px 20px;
+    outline: none;
     cursor: pointer;
 }
 
@@ -14,7 +15,7 @@
 
 .primary:hover {
     background-color: #D33706;
-    border: 2px solid #D33706;
+    border: 1px solid #D33706;
 }
 
 .secondary {
@@ -22,16 +23,16 @@
 }
 
 .secondary:hover {
-    border: 2px solid #D33706;
+    border: 1px solid #D33706;
 }
 
 .primary.disabled {
     background: #575D68;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     cursor: default;
 }
 
 .secondary.disabled {
-    border: 2px solid #575D68;
+    border: 1px solid #575D68;
     cursor: default;
 }
