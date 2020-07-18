@@ -6,9 +6,10 @@ import { Button } from '../common/button';
 
 import css from './style.module.css';
 
-const MedicinesItem = ({ id, medicineInfo, onEdit, onDelete }) => {
-  const onDeleteDrugItem = useCallback(() => onDelete(id), [id]);
-  const onEditDrugItem = useCallback(() => onEdit(id), [id]);
+const MedicinesItem = ({ medicineInfo, onEdit, onDelete }) => {
+  const { id } = medicineInfo;
+  const onDeleteMedicineItem = useCallback(() => onDelete(id), [id]);
+  const onEditMedicineItem = useCallback(() => onEdit(id), [id]);
 
   return (
     <div className={css.medicineItem} onDoubleClick={onEdit}>
@@ -18,10 +19,10 @@ const MedicinesItem = ({ id, medicineInfo, onEdit, onDelete }) => {
         ))}
       </div>
       <div className={css.medicineItemButtons}>
-        <Button primary onClick={onEditDrugItem}>
+        <Button primary onClick={onEditMedicineItem}>
           {locale.projectButtons.edit}
         </Button>
-        <Button secondary onClick={onDeleteDrugItem}>
+        <Button secondary onClick={onDeleteMedicineItem}>
           {locale.projectButtons.delete}
         </Button>
       </div>
