@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import css from './style.module.css';
 
-const Button = ({ children, primary, secondary, disabled, onClick, className }) => {
+const Button = ({ children, primary, secondary, disabled, onClick, className, type }) => {
   const buttonClassName = cn(css.button, {
     [css.primary]: primary,
     [css.secondary]: secondary,
@@ -12,16 +12,20 @@ const Button = ({ children, primary, secondary, disabled, onClick, className }) 
     [className]: className,
   });
 
-  return (
-    <button onClick={onClick} className={buttonClassName}>
-      {children}
-    </button>
-  );
+  const buttonElementProps = {
+    type,
+    disabled,
+    onClick,
+    className: buttonClassName,
+  };
+
+  return <button {...buttonElementProps}>{children}</button>;
 };
 
 Button.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
+  type: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   className: PropTypes.string,
