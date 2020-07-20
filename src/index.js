@@ -4,9 +4,11 @@ import { Provider } from 'react-redux';
 import { createFirestoreInstance } from 'redux-firestore';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 
-import App from './App';
+import { Medicines } from './pages';
 import { store } from './store/configureStore';
 import { firebase } from './configs/firebaseConfig';
+
+import './styles/reset.css';
 
 const firebaseProps = {
   firebase,
@@ -18,7 +20,7 @@ const firebaseProps = {
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...firebaseProps}>
-      <App />
+      <Medicines />
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById('root'),

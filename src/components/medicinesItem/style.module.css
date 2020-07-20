@@ -25,7 +25,12 @@
 .medicineItemText {
     font-size: 14px;
     line-height: 12px;
+    margin-right: 5px;
     color: #fff;
+}
+
+.medicineItemText:first-child {
+    margin-left: 5px;
 }
 
 .medicineItemButtons {
