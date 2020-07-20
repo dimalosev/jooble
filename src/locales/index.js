@@ -10,7 +10,8 @@ const locale = {
     plus: '+',
   },
   formFields: {
-    formTitle: 'Add/edit medicine',
+    formTitleEdit: 'Edit medicine',
+    formTitleCreate: 'Add medicine',
     code: 'Code',
     name: 'Name',
     price: 'Price',

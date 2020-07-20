@@ -44,6 +44,7 @@ const Modal = ({ isShow, setShow, createMedicine, updateMedicine, editId, setEdi
       case MODAL_TAB.SECOND:
         return (
           <ModalSecondTab
+            editId={editId}
             prevTab={prevTab}
             handleCloseModal={handleCloseModal}
             onSubmit={onSubmit}
@@ -58,7 +59,10 @@ const Modal = ({ isShow, setShow, createMedicine, updateMedicine, editId, setEdi
     <Portal>
       <div className={css.modalOverlay}>
         <div className={css.modalContent}>
-          <h3 className={css.modalTitle}>{locale.formFields.formTitle}</h3>
+          <h3 className={css.modalTitle}>
+            {editId ? locale.formFields.formTitleEdit : locale.formFields.formTitleCreate}
+            {` ${modalTab} / 2`}
+          </h3>
           {renderModalContent(modalTab)}
         </div>
       </div>

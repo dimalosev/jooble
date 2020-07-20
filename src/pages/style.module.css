@@ -12,3 +12,9 @@
     bottom: 120px;
     right: 120px;
 }
+
+@media all and (max-width: 768px) {
+    .medicinesContainer {
+        padding: 20px 10px;
+    }
+}

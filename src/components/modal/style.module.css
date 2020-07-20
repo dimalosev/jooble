@@ -16,12 +16,12 @@
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    width: 40%;
-    height: 60%;
+    max-width: 400px;
+    height: 450px;
     padding: 25px;
     z-index: 1001;
     border-radius: 2px;
-    background: #272F3D;
+    background: #2D3544;
     box-shadow: -2px 4px 4px rgba(20, 20, 20, 0.1), 0 4px 4px rgba(0, 0, 0, 0.35);
 }
 
@@ -32,6 +32,22 @@
     margin-bottom: 20px;
 }
 
-.modalButton {
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modalControl {
+    display: flex;
+    justify-content: center;
+}
+
+.modalControl button {
     margin-right: 20px;
+}
+
+.modalControl button:last-child {
+    margin-right: 0;
 }

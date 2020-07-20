@@ -7,7 +7,7 @@ const TextArea = ({ input, label, meta: { touched, error } }) => (
   <div className={css.inputWrapper}>
     <label className={css.inputLabel}>{label}</label>
     <div className={css.inputFieldWrapper}>
-      <textarea {...input} className={css.inputField} placeholder={label} rows="4" cols="30" />
+      <textarea {...input} className={css.inputField} placeholder={label} rows="2" cols="25" />
       {touched && error && <span className={css.inputError}>{error}</span>}
     </div>
   </div>

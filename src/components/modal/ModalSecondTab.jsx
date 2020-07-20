@@ -6,29 +6,29 @@ import { locale } from '../../locales';
 import { validate } from '../../configs/fieldValidation';
 import { MODAL_KEY } from '../../constants/projectConstants';
 import { Button } from '../common/button';
-import { Input } from '../common/inputs';
+import { TextArea } from '../common/inputs';
 
 import css from './style.module.css';
 
-const ModalSecondTab = ({ handleSubmit, prevTab, handleCloseModal }) => (
-  <form onSubmit={handleSubmit}>
-    <div className={css.modalFields}>
+const ModalSecondTab = ({ editId, handleSubmit, prevTab, handleCloseModal }) => (
+  <form onSubmit={handleSubmit} className={css.modalForm}>
+    <div>
       <Field
         type="textarea"
         name="compositionAndFormOfRelease"
-        component={Input}
+        component={TextArea}
         label={locale.formFields.composition}
       />
       <Field
         type="textarea"
         name="indication"
-        component={Input}
+        component={TextArea}
         label={locale.formFields.indication}
       />
       <Field
         type="textarea"
         name="contraindications"
-        component={Input}
+        component={TextArea}
         label={locale.formFields.contraindication}
       />
     </div>
@@ -40,7 +40,7 @@ const ModalSecondTab = ({ handleSubmit, prevTab, handleCloseModal }) => (
         {locale.projectButtons.prev}
       </Button>
       <Button primary type="submit">
-        {locale.projectButtons.create}
+        {editId ? locale.projectButtons.edit : locale.projectButtons.create}
       </Button>
     </div>
   </form>
